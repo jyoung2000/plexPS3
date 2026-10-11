@@ -1,0 +1,131 @@
+{
+ "Directory": [
+  {
+   "key": "%23",
+   "size": 1,
+   "title": "#"
+  },
+  {
+   "key": "A",
+   "size": 1,
+   "title": "A"
+  },
+  {
+   "key": "B",
+   "size": 1,
+   "title": "B"
+  },
+  {
+   "key": "C",
+   "size": 1,
+   "title": "C"
+  },
+  {
+   "key": "D",
+   "size": 1,
+   "title": "D"
+  },
+  {
+   "key": "E",
+   "size": 1,
+   "title": "E"
+  },
+  {
+   "key": "F",
+   "size": 1,
+   "title": "F"
+  },
+  {
+   "key": "G",
+   "size": 1,
+   "title": "G"
+  },
+  {
+   "key": "H",
+   "size": 1,
+   "title": "H"
+  },
+  {
+   "key": "K",
+   "size": 1,
+   "title": "K"
+  },
+  {
+   "key": "L",
+   "size": 2,
+   "title": "L"
+  },
+  {
+   "key": "N",
+   "size": 1,
+   "title": "N"
+  },
+  {
+   "key": "O",
+   "size": 1,
+   "title": "O"
+  },
+  {
+   "key": "P",
+   "size": 1,
+   "title": "P"
+  },
+  {
+   "key": "Q",
+   "size": 1,
+   "title": "Q"
+  },
+  {
+   "key": "R",
+   "size": 1,
+   "title": "R"
+  },
+  {
+   "key": "S",
+   "size": 2,
+   "title": "S"
+  },
+  {
+   "key": "T",
+   "size": 1,
+   "title": "T"
+  },
+  {
+   "key": "U",
+   "size": 2,
+   "title": "U"
+  },
+  {
+   "key": "V",
+   "size": 2,
+   "title": "V"
+  },
+  {
+   "key": "W",
+   "size": 1,
+   "title": "W"
+  },
+  {
+   "key": "X",
+   "size": 1,
+   "title": "X"
+  },
+  {
+   "key": "Z",
+   "size": 1,
+   "title": "Z"
+  }
+ ],
+ "allowSync": false,
+ "art": "/:/resources/movie-fanart.jpg",
+ "content": "secondary",
+ "identifier": "com.plexapp.plugins.library",
+ "mediaTagPrefix": "/system/bundle/media/flags/",
+ "mediaTagVersion": 1786914632,
+ "size": 23,
+ "thumb": "/:/resources/movie.png",
+ "title1": "Movies",
+ "title2": "By First Letter",
+ "viewGroup": "secondary",
+ "viewMode": 65592
+}

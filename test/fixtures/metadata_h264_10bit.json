@@ -1,0 +1,103 @@
+{
+ "Metadata": [
+  {
+   "Image": [
+    {
+     "alt": "Charlie Hi10",
+     "type": "coverPoster",
+     "url": "/library/metadata/3/thumb/1791706372"
+    },
+    {
+     "alt": "Charlie Hi10",
+     "type": "background",
+     "url": "/library/metadata/3/art/1791706372"
+    }
+   ],
+   "Media": [
+    {
+     "Part": [
+      {
+       "Stream": [
+        {
+         "bitDepth": 10,
+         "bitrate": 6447,
+         "chromaLocation": "left",
+         "chromaSubsampling": "4:2:0",
+         "codec": "h264",
+         "codedHeight": 720,
+         "codedWidth": 1280,
+         "colorRange": "tv",
+         "displayTitle": "720p",
+         "extendedDisplayTitle": "720p (H.264 High 10)",
+         "frameRate": 24.0,
+         "hasScalingMatrix": false,
+         "height": 720,
+         "id": 7,
+         "index": 0,
+         "language": "English",
+         "languageCode": "eng",
+         "languageTag": "en",
+         "level": 31,
+         "profile": "high 10",
+         "refFrames": 1,
+         "scanType": "progressive",
+         "streamType": 1,
+         "width": 1280
+        },
+        {
+         "channels": 1,
+         "codec": "aac",
+         "displayTitle": "English (AAC Mono)",
+         "extendedDisplayTitle": "English (AAC Mono)",
+         "id": 8,
+         "index": 1,
+         "language": "English",
+         "languageCode": "eng",
+         "languageTag": "en",
+         "samplingRate": 48000,
+         "selected": true,
+         "streamType": 2
+        }
+       ],
+       "container": "mkv",
+       "duration": 8021,
+       "file": "REDACTED",
+       "id": 3,
+       "key": "/library/parts/3/1791706285/file.mkv",
+       "size": 6464145,
+       "videoProfile": "high 10"
+      }
+     ],
+     "aspectRatio": 1.78,
+     "audioChannels": 1,
+     "audioCodec": "aac",
+     "bitrate": 6447,
+     "container": "mkv",
+     "duration": 8021,
+     "height": 720,
+     "id": 3,
+     "videoCodec": "h264",
+     "videoFrameRate": "24p",
+     "videoProfile": "high 10",
+     "videoResolution": "720",
+     "width": 1280
+    }
+   ],
+   "addedAt": 1791706285,
+   "art": "/library/metadata/3/art/1791706372",
+   "duration": 8021,
+   "guid": "local://3",
+   "key": "/library/metadata/3",
+   "librarySectionID": 1,
+   "librarySectionKey": "/library/sections/1",
+   "librarySectionTitle": "Movies",
+   "ratingKey": "3",
+   "summary": "",
+   "thumb": "/library/metadata/3/thumb/1791706372",
+   "title": "Charlie Hi10",
+   "type": "movie",
+   "updatedAt": 1791706372,
+   "year": 2020
+  }
+ ]
+}

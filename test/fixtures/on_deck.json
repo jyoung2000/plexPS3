@@ -1,0 +1,8 @@
+{
+ "allowSync": false,
+ "identifier": "com.plexapp.plugins.library",
+ "mediaTagPrefix": "/system/bundle/media/flags/",
+ "mediaTagVersion": 1786914632,
+ "mixedParents": true,
+ "size": 0
+}

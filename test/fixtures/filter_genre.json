@@ -1,0 +1,40 @@
+{
+ "Directory": [
+  {
+   "fastKey": "/library/sections/1/all?genre=4",
+   "key": "4",
+   "title": "Documentary",
+   "type": "genre"
+  },
+  {
+   "fastKey": "/library/sections/1/all?genre=13",
+   "key": "13",
+   "title": "Drama",
+   "type": "genre"
+  },
+  {
+   "fastKey": "/library/sections/1/all?genre=20",
+   "key": "20",
+   "title": "Music",
+   "type": "genre"
+  },
+  {
+   "fastKey": "/library/sections/1/all?genre=5",
+   "key": "5",
+   "title": "Short",
+   "type": "genre"
+  }
+ ],
+ "allowSync": false,
+ "art": "/:/resources/movie-fanart.jpg",
+ "content": "secondary",
+ "identifier": "com.plexapp.plugins.library",
+ "mediaTagPrefix": "/system/bundle/media/flags/",
+ "mediaTagVersion": 1786914632,
+ "size": 4,
+ "thumb": "/:/resources/movie.png",
+ "title1": "Movies",
+ "title2": "By Genre",
+ "viewGroup": "secondary",
+ "viewMode": 65592
+}

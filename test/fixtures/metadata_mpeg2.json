@@ -1,0 +1,92 @@
+{
+ "Metadata": [
+  {
+   "Image": [
+    {
+     "alt": "Delta MPEG2",
+     "type": "coverPoster",
+     "url": "/library/metadata/4/thumb/1791706374"
+    },
+    {
+     "alt": "Delta MPEG2",
+     "type": "background",
+     "url": "/library/metadata/4/art/1791706374"
+    }
+   ],
+   "Media": [
+    {
+     "Part": [
+      {
+       "Stream": [
+        {
+         "bitrate": 642,
+         "codec": "mpeg2video",
+         "codedHeight": 480,
+         "codedWidth": 720,
+         "displayTitle": "480p",
+         "extendedDisplayTitle": "480p (MPEG2VIDEO)",
+         "frameRate": 29.97,
+         "height": 480,
+         "id": 9,
+         "index": 0,
+         "refFrames": 1,
+         "scanType": "progressive",
+         "streamIdentifier": "480",
+         "streamType": 1,
+         "width": 720
+        },
+        {
+         "audioChannelLayout": "mono",
+         "bitrate": 384,
+         "channels": 1,
+         "codec": "mp2",
+         "displayTitle": "Unknown (MP2 Mono)",
+         "extendedDisplayTitle": "Unknown (MP2 Mono)",
+         "id": 10,
+         "index": 1,
+         "samplingRate": 48000,
+         "selected": true,
+         "streamIdentifier": "448",
+         "streamType": 2
+        }
+       ],
+       "container": "mpeg",
+       "duration": 8018,
+       "file": "REDACTED",
+       "id": 4,
+       "key": "/library/parts/4/1791706285/file.mpg",
+       "size": 1028096
+      }
+     ],
+     "aspectRatio": 1.66,
+     "audioChannels": 1,
+     "audioCodec": "mp2",
+     "bitrate": 1026,
+     "container": "mpeg",
+     "duration": 8018,
+     "height": 480,
+     "id": 4,
+     "videoCodec": "mpeg2video",
+     "videoFrameRate": "NTSC",
+     "videoResolution": "480",
+     "width": 720
+    }
+   ],
+   "addedAt": 1791706285,
+   "art": "/library/metadata/4/art/1791706374",
+   "duration": 8018,
+   "guid": "local://4",
+   "key": "/library/metadata/4",
+   "librarySectionID": 1,
+   "librarySectionKey": "/library/sections/1",
+   "librarySectionTitle": "Movies",
+   "ratingKey": "4",
+   "summary": "",
+   "thumb": "/library/metadata/4/thumb/1791706374",
+   "title": "Delta MPEG2",
+   "type": "movie",
+   "updatedAt": 1791706374,
+   "year": 2005
+  }
+ ]
+}

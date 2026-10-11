@@ -1,0 +1,11 @@
+# reference checkouts (Phase 0)
+ref/
+# secrets
+.env
+# node
+node_modules/
+# runtime output
+logs/
+test/.live-tmp/
+*.pyc
+__pycache__/

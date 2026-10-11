@@ -1,0 +1,103 @@
+{
+ "Metadata": [
+  {
+   "Media": [
+    {
+     "Part": [
+      {
+       "container": "mp3",
+       "duration": 5042,
+       "file": "REDACTED",
+       "id": 30,
+       "key": "/library/parts/30/1791706293/file.mp3",
+       "size": 81205
+      }
+     ],
+     "audioChannels": 1,
+     "audioCodec": "mp3",
+     "bitrate": 128,
+     "container": "mp3",
+     "duration": 5042,
+     "id": 30
+    }
+   ],
+   "addedAt": 1791706293,
+   "duration": 5042,
+   "grandparentGuid": "local://32",
+   "grandparentKey": "/library/metadata/32",
+   "grandparentRatingKey": "32",
+   "grandparentTitle": "Test Artist",
+   "guid": "local://34",
+   "index": 1,
+   "key": "/library/metadata/34",
+   "parentGuid": "local://33",
+   "parentIndex": 1,
+   "parentKey": "/library/metadata/33",
+   "parentRatingKey": "33",
+   "parentTitle": "Test Album",
+   "ratingKey": "34",
+   "summary": "",
+   "title": "Track 1",
+   "type": "track"
+  },
+  {
+   "Media": [
+    {
+     "Part": [
+      {
+       "container": "mp3",
+       "duration": 5042,
+       "file": "REDACTED",
+       "id": 31,
+       "key": "/library/parts/31/1791706293/file.mp3",
+       "size": 81205
+      }
+     ],
+     "audioChannels": 1,
+     "audioCodec": "mp3",
+     "bitrate": 128,
+     "container": "mp3",
+     "duration": 5042,
+     "id": 31
+    }
+   ],
+   "addedAt": 1791706293,
+   "duration": 5042,
+   "grandparentGuid": "local://32",
+   "grandparentKey": "/library/metadata/32",
+   "grandparentRatingKey": "32",
+   "grandparentTitle": "Test Artist",
+   "guid": "local://35",
+   "index": 2,
+   "key": "/library/metadata/35",
+   "parentGuid": "local://33",
+   "parentIndex": 1,
+   "parentKey": "/library/metadata/33",
+   "parentRatingKey": "33",
+   "parentTitle": "Test Album",
+   "ratingKey": "35",
+   "summary": "",
+   "title": "Track 2",
+   "type": "track"
+  }
+ ],
+ "allowSync": true,
+ "art": "/:/resources/artist-fanart.jpg",
+ "grandparentRatingKey": 32,
+ "grandparentTitle": "Test Artist",
+ "identifier": "com.plexapp.plugins.library",
+ "key": "33",
+ "librarySectionID": 3,
+ "librarySectionTitle": "Music",
+ "librarySectionUUID": "9e4e2605-c9ea-4522-b056-3fab3cd27221",
+ "mediaTagPrefix": "/system/bundle/media/flags/",
+ "mediaTagVersion": 1786914632,
+ "nocache": true,
+ "parentIndex": 1,
+ "parentTitle": "Test Album",
+ "size": 2,
+ "title1": "Test Artist",
+ "title2": "Test Album",
+ "viewGroup": "track",
+ "viewMode": 65593
+}

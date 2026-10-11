@@ -1,0 +1,15 @@
+{
+  "type": "ecmascript",
+  "apiversion": 2,
+  "id": "plex",
+  "file": "plugin.js",
+  "title": "Plex",
+  "icon": "logo.png",
+  "version": "0.1.0",
+  "category": "video",
+  "author": "movian-plex contributors",
+  "synopsis": "Browse and play your Plex Media Server libraries",
+  "description": "Plex client for Movian: PIN login via plex.tv/link, library browsing, search and filters, direct play of PS3-compatible files and server-side HLS transcoding for everything else.",
+  "showtimeVersion": "5.0.462",
+  "homepage": "https://github.com/jyoung2000/plexps3"
+}

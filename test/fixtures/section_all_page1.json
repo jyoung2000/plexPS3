@@ -1,0 +1,330 @@
+{
+ "Metadata": [
+  {
+   "Country": [
+    {
+     "tag": "United States of America"
+    }
+   ],
+   "Genre": [
+    {
+     "tag": "Documentary"
+    }
+   ],
+   "Image": [
+    {
+     "alt": "2009 New York Yankees: The Official World Series Film",
+     "type": "coverPoster",
+     "url": "/library/metadata/25/thumb/1791706378"
+    },
+    {
+     "alt": "2009 New York Yankees: The Official World Series Film",
+     "type": "background",
+     "url": "/library/metadata/25/art/1791706378"
+    }
+   ],
+   "Media": [
+    {
+     "Part": [
+      {
+       "container": "mp4",
+       "duration": 4000,
+       "file": "REDACTED",
+       "has64bitOffsets": false,
+       "id": 25,
+       "key": "/library/parts/25/1791706291/file.mp4",
+       "optimizedForStreaming": true,
+       "size": 900478,
+       "videoProfile": "constrained baseline"
+      }
+     ],
+     "aspectRatio": 1.78,
+     "audioChannels": 1,
+     "audioCodec": "aac",
+     "bitrate": 1801,
+     "container": "mp4",
+     "duration": 4000,
+     "has64bitOffsets": false,
+     "height": 360,
+     "id": 25,
+     "optimizedForStreaming": 1,
+     "videoCodec": "h264",
+     "videoFrameRate": "24p",
+     "videoProfile": "constrained baseline",
+     "videoResolution": "sd",
+     "width": 640
+    }
+   ],
+   "Role": [
+    {
+     "tag": "Curt Chaplin"
+    },
+    {
+     "tag": "Philadelphia Phillies"
+    },
+    {
+     "tag": "Derek Jeter"
+    }
+   ],
+   "UltraBlurColors": {
+    "bottomLeft": "004027",
+    "bottomRight": "0305fa",
+    "topLeft": "450d05",
+    "topRight": "0505f5"
+   },
+   "addedAt": 1791706291,
+   "art": "/library/metadata/25/art/1791706378",
+   "audienceRating": 1.0,
+   "audienceRatingImage": "themoviedb://image.rating",
+   "contentRating": "Not Rated",
+   "duration": 4000,
+   "guid": "plex://movie/5d7770047a53e9001e79a595",
+   "key": "/library/metadata/25",
+   "originallyAvailableAt": "2009-11-24",
+   "ratingKey": "25",
+   "slug": "2009-new-york-yankees-the-official-world-series-film",
+   "studio": "Major League Baseball Productions",
+   "summary": "The New York Yankees Are Once Again World Series Champions!  The Yankees won their record 27th World Series Championship with a thrilling six game victory over the NL Champion Philadelphia Philles.  From Jeter to Rivera to A-Rod and C.C. its all here.",
+   "tagline": "It was the matchup many had hoped for - the defending World Series champion Philadelphia Phillies against the team that had won more titles than any team in any sport: New York Yankees",
+   "thumb": "/library/metadata/25/thumb/1791706378",
+   "title": "2009 New York Yankees: The Official World Series Film",
+   "type": "movie",
+   "updatedAt": 1791706378,
+   "year": 2009
+  },
+  {
+   "Image": [
+    {
+     "alt": "Alpha Direct",
+     "type": "coverPoster",
+     "url": "/library/metadata/1/thumb/1791706367"
+    },
+    {
+     "alt": "Alpha Direct",
+     "type": "background",
+     "url": "/library/metadata/1/art/1791706367"
+    }
+   ],
+   "Media": [
+    {
+     "Part": [
+      {
+       "container": "mkv",
+       "duration": 20021,
+       "file": "REDACTED",
+       "id": 1,
+       "key": "/library/parts/1/1791706265/file.mkv",
+       "size": 33049804,
+       "videoProfile": "constrained baseline"
+      }
+     ],
+     "aspectRatio": 1.78,
+     "audioChannels": 1,
+     "audioCodec": "aac",
+     "bitrate": 13206,
+     "container": "mkv",
+     "duration": 20021,
+     "height": 1080,
+     "id": 1,
+     "videoCodec": "h264",
+     "videoFrameRate": "24p",
+     "videoProfile": "constrained baseline",
+     "videoResolution": "1080",
+     "width": 1920
+    }
+   ],
+   "addedAt": 1791706265,
+   "art": "/library/metadata/1/art/1791706367",
+   "duration": 20021,
+   "guid": "local://1",
+   "key": "/library/metadata/1",
+   "ratingKey": "1",
+   "summary": "",
+   "thumb": "/library/metadata/1/thumb/1791706367",
+   "title": "Alpha Direct",
+   "type": "movie",
+   "updatedAt": 1791706367,
+   "year": 2019
+  },
+  {
+   "Image": [
+    {
+     "alt": "Bravo",
+     "type": "coverPoster",
+     "url": "/library/metadata/2/thumb/1791706372"
+    },
+    {
+     "alt": "Bravo",
+     "type": "background",
+     "url": "/library/metadata/2/art/1791706372"
+    }
+   ],
+   "Media": [
+    {
+     "Part": [
+      {
+       "container": "mp4",
+       "duration": 8000,
+       "file": "REDACTED",
+       "has64bitOffsets": false,
+       "id": 2,
+       "key": "/library/parts/2/1791706284/file.mp4",
+       "optimizedForStreaming": false,
+       "size": 12393597,
+       "videoProfile": "main 10"
+      }
+     ],
+     "aspectRatio": 1.78,
+     "audioChannels": 1,
+     "audioCodec": "aac",
+     "bitrate": 12394,
+     "container": "mp4",
+     "duration": 8000,
+     "has64bitOffsets": false,
+     "height": 2160,
+     "id": 2,
+     "optimizedForStreaming": 0,
+     "videoCodec": "hevc",
+     "videoFrameRate": "24p",
+     "videoProfile": "main 10",
+     "videoResolution": "4k",
+     "width": 3840
+    }
+   ],
+   "addedAt": 1791706284,
+   "art": "/library/metadata/2/art/1791706372",
+   "duration": 8000,
+   "guid": "local://2",
+   "key": "/library/metadata/2",
+   "ratingKey": "2",
+   "summary": "",
+   "thumb": "/library/metadata/2/thumb/1791706372",
+   "title": "Bravo",
+   "type": "movie",
+   "updatedAt": 1791706372,
+   "year": 2021
+  },
+  {
+   "Image": [
+    {
+     "alt": "Charlie Hi10",
+     "type": "coverPoster",
+     "url": "/library/metadata/3/thumb/1791706372"
+    },
+    {
+     "alt": "Charlie Hi10",
+     "type": "background",
+     "url": "/library/metadata/3/art/1791706372"
+    }
+   ],
+   "Media": [
+    {
+     "Part": [
+      {
+       "container": "mkv",
+       "duration": 8021,
+       "file": "REDACTED",
+       "id": 3,
+       "key": "/library/parts/3/1791706285/file.mkv",
+       "size": 6464145,
+       "videoProfile": "high 10"
+      }
+     ],
+     "aspectRatio": 1.78,
+     "audioChannels": 1,
+     "audioCodec": "aac",
+     "bitrate": 6447,
+     "container": "mkv",
+     "duration": 8021,
+     "height": 720,
+     "id": 3,
+     "videoCodec": "h264",
+     "videoFrameRate": "24p",
+     "videoProfile": "high 10",
+     "videoResolution": "720",
+     "width": 1280
+    }
+   ],
+   "addedAt": 1791706285,
+   "art": "/library/metadata/3/art/1791706372",
+   "duration": 8021,
+   "guid": "local://3",
+   "key": "/library/metadata/3",
+   "ratingKey": "3",
+   "summary": "",
+   "thumb": "/library/metadata/3/thumb/1791706372",
+   "title": "Charlie Hi10",
+   "type": "movie",
+   "updatedAt": 1791706372,
+   "year": 2020
+  },
+  {
+   "Image": [
+    {
+     "alt": "Delta MPEG2",
+     "type": "coverPoster",
+     "url": "/library/metadata/4/thumb/1791706374"
+    },
+    {
+     "alt": "Delta MPEG2",
+     "type": "background",
+     "url": "/library/metadata/4/art/1791706374"
+    }
+   ],
+   "Media": [
+    {
+     "Part": [
+      {
+       "container": "mpeg",
+       "duration": 8018,
+       "file": "REDACTED",
+       "id": 4,
+       "key": "/library/parts/4/1791706285/file.mpg",
+       "size": 1028096
+      }
+     ],
+     "aspectRatio": 1.66,
+     "audioChannels": 1,
+     "audioCodec": "mp2",
+     "bitrate": 1026,
+     "container": "mpeg",
+     "duration": 8018,
+     "height": 480,
+     "id": 4,
+     "videoCodec": "mpeg2video",
+     "videoFrameRate": "NTSC",
+     "videoResolution": "480",
+     "width": 720
+    }
+   ],
+   "addedAt": 1791706285,
+   "art": "/library/metadata/4/art/1791706374",
+   "duration": 8018,
+   "guid": "local://4",
+   "key": "/library/metadata/4",
+   "ratingKey": "4",
+   "summary": "",
+   "thumb": "/library/metadata/4/thumb/1791706374",
+   "title": "Delta MPEG2",
+   "type": "movie",
+   "updatedAt": 1791706374,
+   "year": 2005
+  }
+ ],
+ "allowSync": true,
+ "art": "/:/resources/movie-fanart.jpg",
+ "identifier": "com.plexapp.plugins.library",
+ "librarySectionID": 1,
+ "librarySectionTitle": "Movies",
+ "librarySectionUUID": "9e2ff212-a2ad-4063-a7b9-b87dac263ca4",
+ "mediaTagPrefix": "/system/bundle/media/flags/",
+ "mediaTagVersion": 1786914632,
+ "offset": 0,
+ "size": 5,
+ "thumb": "/:/resources/movie.png",
+ "title1": "Movies",
+ "title2": "All Movies",
+ "totalSize": 27,
+ "viewGroup": "movie",
+ "viewMode": 65592
+}

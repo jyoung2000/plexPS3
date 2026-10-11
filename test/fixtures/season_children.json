@@ -1,0 +1,199 @@
+{
+ "Metadata": [
+  {
+   "Image": [
+    {
+     "alt": "Episode 1",
+     "type": "snapshot",
+     "url": "/library/metadata/29/thumb/1791706378"
+    }
+   ],
+   "Media": [
+    {
+     "Part": [
+      {
+       "container": "mkv",
+       "duration": 6021,
+       "file": "REDACTED",
+       "id": 27,
+       "key": "/library/parts/27/1791706291/file.mkv",
+       "size": 4841668,
+       "videoProfile": "constrained baseline"
+      }
+     ],
+     "aspectRatio": 1.78,
+     "audioChannels": 1,
+     "audioCodec": "aac",
+     "bitrate": 6433,
+     "container": "mkv",
+     "duration": 6021,
+     "height": 720,
+     "id": 27,
+     "videoCodec": "h264",
+     "videoFrameRate": "24p",
+     "videoProfile": "constrained baseline",
+     "videoResolution": "720",
+     "width": 1280
+    }
+   ],
+   "addedAt": 1791706291,
+   "duration": 6021,
+   "grandparentGuid": "plex://show/677a050b3dd5ed5b54ee194a",
+   "grandparentKey": "/library/metadata/27",
+   "grandparentRatingKey": "27",
+   "grandparentSlug": "dette-er-en-test-show",
+   "grandparentTitle": "Dette er en test show",
+   "guid": "plex://episode/677a050c3dd5ed5b54ee194e",
+   "index": 1,
+   "key": "/library/metadata/29",
+   "originallyAvailableAt": "2024-12-30",
+   "parentGuid": "plex://season/677a050c3dd5ed5b54ee194c",
+   "parentIndex": 1,
+   "parentKey": "/library/metadata/28",
+   "parentRatingKey": "28",
+   "parentTitle": "Season 1",
+   "ratingKey": "29",
+   "summary": "",
+   "thumb": "/library/metadata/29/thumb/1791706378",
+   "title": "Episode 1",
+   "type": "episode",
+   "updatedAt": 1791706378,
+   "year": 2024
+  },
+  {
+   "Image": [
+    {
+     "alt": "Episode 2",
+     "type": "snapshot",
+     "url": "/library/metadata/30/thumb/1791706378"
+    }
+   ],
+   "Media": [
+    {
+     "Part": [
+      {
+       "container": "mkv",
+       "duration": 6021,
+       "file": "REDACTED",
+       "id": 28,
+       "key": "/library/parts/28/1791706292/file.mkv",
+       "size": 4841668,
+       "videoProfile": "constrained baseline"
+      }
+     ],
+     "aspectRatio": 1.78,
+     "audioChannels": 1,
+     "audioCodec": "aac",
+     "bitrate": 6433,
+     "container": "mkv",
+     "duration": 6021,
+     "height": 720,
+     "id": 28,
+     "videoCodec": "h264",
+     "videoFrameRate": "24p",
+     "videoProfile": "constrained baseline",
+     "videoResolution": "720",
+     "width": 1280
+    }
+   ],
+   "addedAt": 1791706292,
+   "duration": 6021,
+   "grandparentGuid": "plex://show/677a050b3dd5ed5b54ee194a",
+   "grandparentKey": "/library/metadata/27",
+   "grandparentRatingKey": "27",
+   "grandparentSlug": "dette-er-en-test-show",
+   "grandparentTitle": "Dette er en test show",
+   "guid": "local://30",
+   "index": 2,
+   "key": "/library/metadata/30",
+   "parentGuid": "plex://season/677a050c3dd5ed5b54ee194c",
+   "parentIndex": 1,
+   "parentKey": "/library/metadata/28",
+   "parentRatingKey": "28",
+   "parentTitle": "Season 1",
+   "ratingKey": "30",
+   "summary": "",
+   "thumb": "/library/metadata/30/thumb/1791706378",
+   "title": "Episode 2",
+   "type": "episode",
+   "updatedAt": 1791706378
+  },
+  {
+   "Image": [
+    {
+     "alt": "Episode 3",
+     "type": "snapshot",
+     "url": "/library/metadata/31/thumb/1791706379"
+    }
+   ],
+   "Media": [
+    {
+     "Part": [
+      {
+       "container": "mkv",
+       "duration": 6021,
+       "file": "REDACTED",
+       "id": 29,
+       "key": "/library/parts/29/1791706293/file.mkv",
+       "size": 4841668,
+       "videoProfile": "constrained baseline"
+      }
+     ],
+     "aspectRatio": 1.78,
+     "audioChannels": 1,
+     "audioCodec": "aac",
+     "bitrate": 6433,
+     "container": "mkv",
+     "duration": 6021,
+     "height": 720,
+     "id": 29,
+     "videoCodec": "h264",
+     "videoFrameRate": "24p",
+     "videoProfile": "constrained baseline",
+     "videoResolution": "720",
+     "width": 1280
+    }
+   ],
+   "addedAt": 1791706293,
+   "duration": 6021,
+   "grandparentGuid": "plex://show/677a050b3dd5ed5b54ee194a",
+   "grandparentKey": "/library/metadata/27",
+   "grandparentRatingKey": "27",
+   "grandparentSlug": "dette-er-en-test-show",
+   "grandparentTitle": "Dette er en test show",
+   "guid": "local://31",
+   "index": 3,
+   "key": "/library/metadata/31",
+   "parentGuid": "plex://season/677a050c3dd5ed5b54ee194c",
+   "parentIndex": 1,
+   "parentKey": "/library/metadata/28",
+   "parentRatingKey": "28",
+   "parentTitle": "Season 1",
+   "ratingKey": "31",
+   "summary": "",
+   "thumb": "/library/metadata/31/thumb/1791706379",
+   "title": "Episode 3",
+   "type": "episode",
+   "updatedAt": 1791706379
+  }
+ ],
+ "allowSync": true,
+ "art": "/:/resources/show-fanart.jpg",
+ "grandparentRatingKey": 27,
+ "grandparentTitle": "Dette er en test show",
+ "identifier": "com.plexapp.plugins.library",
+ "key": "28",
+ "librarySectionID": 2,
+ "librarySectionTitle": "TV Shows",
+ "librarySectionUUID": "4f764db5-1db8-4dee-a897-349e1decde44",
+ "mediaTagPrefix": "/system/bundle/media/flags/",
+ "mediaTagVersion": 1786914632,
+ "nocache": true,
+ "parentIndex": 1,
+ "parentTitle": "",
+ "size": 3,
+ "title1": "Dette er en test show",
+ "title2": "Season 1",
+ "viewGroup": "episode",
+ "viewMode": 65592
+}

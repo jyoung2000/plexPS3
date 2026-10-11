@@ -1,0 +1,141 @@
+{
+ "Hub": [
+  {
+   "context": "",
+   "hubIdentifier": "show",
+   "more": false,
+   "size": 0,
+   "title": "Shows",
+   "type": "show"
+  },
+  {
+   "context": "",
+   "hubIdentifier": "artist",
+   "more": false,
+   "size": 0,
+   "title": "Artists",
+   "type": "artist"
+  },
+  {
+   "context": "",
+   "hubIdentifier": "album",
+   "more": false,
+   "size": 0,
+   "title": "Albums",
+   "type": "album"
+  },
+  {
+   "context": "",
+   "hubIdentifier": "episode",
+   "more": false,
+   "size": 0,
+   "title": "Episodes",
+   "type": "episode"
+  },
+  {
+   "context": "",
+   "hubIdentifier": "movie",
+   "more": false,
+   "size": 0,
+   "title": "Movies",
+   "type": "movie"
+  },
+  {
+   "context": "",
+   "hubIdentifier": "track",
+   "more": false,
+   "size": 0,
+   "title": "Tracks",
+   "type": "track"
+  },
+  {
+   "context": "",
+   "hubIdentifier": "photoalbum",
+   "more": false,
+   "size": 0,
+   "title": "Photo Albums",
+   "type": "photoalbum"
+  },
+  {
+   "context": "",
+   "hubIdentifier": "autotag",
+   "more": false,
+   "size": 0,
+   "title": "Automatic Tags",
+   "type": "autotag"
+  },
+  {
+   "context": "",
+   "hubIdentifier": "photo",
+   "more": false,
+   "size": 0,
+   "title": "Photos",
+   "type": "photo"
+  },
+  {
+   "context": "",
+   "hubIdentifier": "tag",
+   "more": false,
+   "size": 0,
+   "title": "Tags",
+   "type": "tag"
+  },
+  {
+   "context": "",
+   "hubIdentifier": "actor",
+   "more": false,
+   "size": 0,
+   "title": "Actors",
+   "type": "actor"
+  },
+  {
+   "context": "",
+   "hubIdentifier": "director",
+   "more": false,
+   "size": 0,
+   "title": "Directors",
+   "type": "director"
+  },
+  {
+   "context": "",
+   "hubIdentifier": "genre",
+   "more": false,
+   "size": 0,
+   "title": "Genres",
+   "type": "genre"
+  },
+  {
+   "context": "",
+   "hubIdentifier": "collection",
+   "more": false,
+   "size": 0,
+   "title": "Collections",
+   "type": "collection"
+  },
+  {
+   "context": "",
+   "hubIdentifier": "playlist",
+   "more": false,
+   "size": 0,
+   "title": "Playlists",
+   "type": "playlist"
+  },
+  {
+   "context": "",
+   "hubIdentifier": "shared",
+   "more": false,
+   "size": 0,
+   "title": "Shared",
+   "type": "shared"
+  },
+  {
+   "context": "",
+   "hubIdentifier": "place",
+   "more": false,
+   "size": 0,
+   "title": "Places",
+   "type": "place"
+  }
+ ],
+ "size": 17
+}

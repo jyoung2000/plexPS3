@@ -1,0 +1,42 @@
+{
+ "Metadata": [
+  {
+   "addedAt": 1791706377,
+   "guid": "plex://season/677a050c3dd5ed5b54ee194c",
+   "index": 1,
+   "key": "/library/metadata/28/children",
+   "leafCount": 3,
+   "parentGuid": "plex://show/677a050b3dd5ed5b54ee194a",
+   "parentIndex": 1,
+   "parentKey": "/library/metadata/27",
+   "parentRatingKey": "27",
+   "parentSlug": "dette-er-en-test-show",
+   "parentTitle": "Dette er en test show",
+   "parentYear": 2024,
+   "ratingKey": "28",
+   "summary": "",
+   "title": "Season 1",
+   "type": "season",
+   "updatedAt": 1791706378,
+   "viewedLeafCount": 0
+  }
+ ],
+ "allowSync": true,
+ "art": "/:/resources/show-fanart.jpg",
+ "identifier": "com.plexapp.plugins.library",
+ "key": "27",
+ "librarySectionID": 2,
+ "librarySectionTitle": "TV Shows",
+ "librarySectionUUID": "4f764db5-1db8-4dee-a897-349e1decde44",
+ "mediaTagPrefix": "/system/bundle/media/flags/",
+ "mediaTagVersion": 1786914632,
+ "nocache": true,
+ "parentIndex": 1,
+ "parentTitle": "Dette er en test show",
+ "parentYear": 2024,
+ "size": 1,
+ "title1": "TV Shows",
+ "title2": "Dette er en test show",
+ "viewGroup": "season",
+ "viewMode": 65593
+}

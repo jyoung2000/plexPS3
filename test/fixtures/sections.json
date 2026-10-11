@@ -1,0 +1,111 @@
+{
+ "Directory": [
+  {
+   "Location": [
+    {
+     "id": 1,
+     "path": "/tmp/claude-0/-home-user-plexPS3/983d505b-15a2-5319-acf7-9ac34b1c5edd/scratchpad/pms/media/movies"
+    }
+   ],
+   "agent": "tv.plex.agents.movie",
+   "allowSync": false,
+   "content": true,
+   "contentChangedAt": 307,
+   "createdAt": 1791706364,
+   "directory": true,
+   "filters": true,
+   "hidden": 0,
+   "key": "1",
+   "language": "en-US",
+   "metadataAgentProviderGroupId": 1,
+   "refreshing": false,
+   "scannedAt": 1791706733,
+   "scanner": "Plex Movie",
+   "title": "Movies",
+   "type": "movie",
+   "updatedAt": 1791706364,
+   "uuid": "REDACTED"
+  },
+  {
+   "Location": [
+    {
+     "id": 4,
+     "path": "/tmp/claude-0/-home-user-plexPS3/983d505b-15a2-5319-acf7-9ac34b1c5edd/scratchpad/pms/media/movies"
+    }
+   ],
+   "agent": "tv.plex.agents.movie",
+   "allowSync": false,
+   "content": true,
+   "contentChangedAt": 298,
+   "createdAt": 1791706364,
+   "directory": true,
+   "filters": true,
+   "hidden": 0,
+   "key": "4",
+   "language": "en-US",
+   "metadataAgentProviderGroupId": 1,
+   "refreshing": false,
+   "scannedAt": 1791706388,
+   "scanner": "Plex Movie",
+   "title": "Movies Hidden",
+   "type": "movie",
+   "updatedAt": 1791706364,
+   "uuid": "REDACTED"
+  },
+  {
+   "Location": [
+    {
+     "id": 2,
+     "path": "/tmp/claude-0/-home-user-plexPS3/983d505b-15a2-5319-acf7-9ac34b1c5edd/scratchpad/pms/media/tv"
+    }
+   ],
+   "agent": "tv.plex.agents.series",
+   "allowSync": false,
+   "content": true,
+   "contentChangedAt": 146,
+   "createdAt": 1791706364,
+   "directory": true,
+   "filters": true,
+   "hidden": 0,
+   "key": "2",
+   "language": "en-US",
+   "metadataAgentProviderGroupId": 2,
+   "refreshing": false,
+   "scannedAt": 1791706377,
+   "scanner": "Plex TV Series",
+   "title": "TV Shows",
+   "type": "show",
+   "updatedAt": 1791706364,
+   "uuid": "REDACTED"
+  },
+  {
+   "Location": [
+    {
+     "id": 3,
+     "path": "/tmp/claude-0/-home-user-plexPS3/983d505b-15a2-5319-acf7-9ac34b1c5edd/scratchpad/pms/media/music"
+    }
+   ],
+   "agent": "tv.plex.agents.music",
+   "allowSync": false,
+   "content": true,
+   "contentChangedAt": 169,
+   "createdAt": 1791706364,
+   "directory": true,
+   "filters": true,
+   "hidden": 0,
+   "key": "3",
+   "language": "en-US",
+   "metadataAgentProviderGroupId": 3,
+   "refreshing": false,
+   "scannedAt": 1791706380,
+   "scanner": "Plex Music",
+   "title": "Music",
+   "type": "artist",
+   "updatedAt": 1791706364,
+   "uuid": "REDACTED"
+  }
+ ],
+ "allowSync": false,
+ "size": 4,
+ "title1": "Plex Library"
+}

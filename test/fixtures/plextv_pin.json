@@ -1,0 +1,16 @@
+{
+ "authToken": null,
+ "clientIdentifier": "REDACTED",
+ "code": "ABCD",
+ "createdAt": "2026-10-11T08:17:32Z",
+ "expiresAt": "2026-10-11T08:32:32Z",
+ "expiresIn": 900,
+ "id": 123456789,
+ "location": {
+  "code": "US"
+ },
+ "newRegistration": null,
+ "product": "Plex for Movian",
+ "qr": "https://plex.tv/api/v2/pins/qr/ABCD",
+ "trusted": false
+}

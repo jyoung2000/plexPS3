@@ -22,10 +22,22 @@ plugin or in the troubleshooting table:
    live test checks the segment start time moves). Risk: medium.
 2. **Direct-play of real files end to end.** The decision logic and the file
    URL are unit- and live-tested, and an HTTP Range request on a real part is
-   verified (206, correct `Content-Range`). Whether the Cell decoder actually
-   renders every "direct" file is the one thing only the TV shows; the
-   troubleshooting table tells the user to flip Playback mode to *Always
-   transcode* for anything that black-screens. Risk: medium.
+   verified (206, correct `Content-Range`). `decide.js` now routes the stream
+   features that make a spec-valid H.264 file black-screen or stutter on the
+   Cell decoder to the server transcoder in auto mode: interlaced
+   (`scanType`), non-4:2:0 chroma (`chromaSubsampling`), more than four
+   reference frames at >=720p (`refFrames`), and any direct video above
+   20 Mbps (`DIRECT_MAX_VIDEO_KBPS`, which also fixes stutter on large
+   remuxes). All four are covered by unit tests, and *Always direct play*
+   still overrides them. Whether the decoder renders every remaining "direct"
+   file is the one thing only the TV shows; each video item now has a
+   one-press **Force transcode** option (Square) and the global *Always
+   transcode* mode as recovery. Note: Movian does not auto-switch between the
+   `sources` in a `videoparams` on a silent decode failure (`vs_cmp` sorts by
+   bitrate and nothing emits `EVENT_REOPEN` automatically —
+   `src/video/video_playback.c`), so recovery is the conservative
+   classification plus the one-press override, not a hidden fallback source.
+   Risk: low-medium.
 3. **Controller mapping in the player.** Taken from
    `src/ui/glw/glw_ps3.c:622-663` and written into the README, not pressed on a
    real pad. Risk: low (it is Movian's own player, not ours).
@@ -110,7 +122,13 @@ install `libgtk2.0-dev` and the other deps from
   Only plain-`http` LAN connections are offered to the PS3 (its TLS is too old
   for `*.plex.direct` https); `local=true` private-IP addresses are probed
   first via `/identity` with a timeout.
-* **plex.tv fail-soft.** Every plex.tv call is `noFail` and wrapped; if the PIN
-  flow or resource list cannot be reached the UI shows the `get_token.py`
-  instructions instead of crashing (live-tested: the link page renders either a
-  code or the helper text).
+* **plex.tv fail-soft + on-TV entry.** Every plex.tv call is `noFail` and
+  wrapped; if the PIN flow or resource list cannot be reached the UI shows the
+  `get_token.py` instructions. Both the PIN screen and that fallback now also
+  offer **Enter server address on this TV** and **Enter a Plex token on this
+  TV** (controller text dialogs that validate against the server and redirect
+  home on success), so a PS3 whose TLS cannot reach plex.tv never has to leave
+  the plugin for Settings. Live-tested: the link page renders a code or the
+  helper text and always carries both on-TV entry actions, and driving the
+  server-entry action against the live server resolves to the home page or the
+  link page as appropriate.

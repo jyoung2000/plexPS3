@@ -380,6 +380,9 @@ function addVideoOptions(item, m) {
       openUrl(PREFIX + ':play:' + rk + ':resume');
     }, 'play');
   }
+  item.addOptAction('Force transcode (use if the video is black or stutters)', function() {
+    openUrl(PREFIX + ':play:' + rk + ':q:' + decide.DEFAULT_TRANSCODE_QUALITY);
+  }, 'quality');
   item.addOptSeparator('Quality');
   util.each(decide.QUALITIES, function(q) {
     item.addOptAction(q.title, function() {
@@ -994,12 +997,53 @@ new page.Route(PREFIX + ':libraries:first$', function(p) { librariesPage(p, true
 // ---------------------------------------------------------------------------
 // Linking with plex.tv (PIN) and server discovery
 // ---------------------------------------------------------------------------
+function askServerUrl(p) {
+  var v = askText('Server address, e.g. 192.168.1.50 or http://192.168.1.50:32400', null);
+  if(!v) return;
+  conf.serverUrl = util.normalizeServerUrl(v);
+  serverSetting.value = conf.serverUrl;
+  var res = api.validate();
+  if(res.ok) {
+    st.machineId = res.machineIdentifier || '';
+    if(res.name) st.serverName = res.name;
+    st.allowNoAuth = !conf.token;
+    notify('Connected to ' + (res.name || conf.serverUrl), 4);
+    p.redirect(PREFIX + ':start');
+  } else if(res.status === 401) {
+    notify('Reached the server but it needs a token. Link with plex.tv or enter a token.', 6);
+    p.redirect(PREFIX + ':link');
+  } else {
+    notify('No Plex server answered at ' + conf.serverUrl + ' (' + (res.error || 'no reply') + ')', 6);
+  }
+}
+
+function askToken(p) {
+  var v = askText('Paste the token from tools/get_token.py', null);
+  if(!v) return;
+  conf.token = util.trim(v);
+  tokenSetting.value = conf.token;
+  if(conf.serverUrl) {
+    var res = api.validate();
+    notify(res.ok ? 'Token accepted' : 'Token set, but the server did not accept it (' + (res.error || '') + ')', 5);
+    if(res.ok) { p.redirect(PREFIX + ':start'); return; }
+  } else {
+    notify('Token saved. Now set the server address.', 5);
+  }
+  p.redirect(PREFIX + ':link');
+}
+
+function manualEntryActions(p) {
+  p.appendAction('Enter server address on this TV', function() { askServerUrl(p); });
+  p.appendAction('Enter a Plex token on this TV', function() { askToken(p); });
+  p.appendAction('Open Plex settings', function() { openUrl(settingsUrl()); });
+}
+
 function tokenHelpItems(p, reason) {
   p.appendPassiveItem('directory', '', { title: 'plex.tv could not be reached from this device' + (reason ? ' (' + reason + ')' : '') });
   p.appendPassiveItem('directory', '', { title: 'On your PC run:  python tools/get_token.py' });
-  p.appendPassiveItem('directory', '', { title: 'then enter the printed token and your server address in Settings > Plex' });
-  p.appendAction('Open Plex settings', function() { openUrl(settingsUrl()); });
-  p.appendAction('Try again', function() { p.redirect(PREFIX + ':link'); });
+  p.appendPassiveItem('directory', '', { title: 'then enter the printed token and server address below (no need to leave the TV)' });
+  manualEntryActions(p);
+  p.appendAction('Try plex.tv again', function() { p.redirect(PREFIX + ':link'); });
 }
 
 new page.Route(PREFIX + ':link$', function(p) {
@@ -1017,7 +1061,8 @@ new page.Route(PREFIX + ':link$', function(p) {
   p.appendPassiveItem('directory', '', { title: '1. On your phone or PC go to  plex.tv/link' });
   p.appendPassiveItem('directory', '', { title: '2. Sign in and type the code:  ' + pin.code });
   var status = p.appendPassiveItem('directory', '', { title: 'Waiting for the code... (' + util.fmtClock(pin.expiresIn * 1000) + ' left)' });
-  p.appendAction('Enter a token manually instead (Settings > Plex)', function() { openUrl(settingsUrl()); });
+  p.appendItem('', 'separator', { title: 'Or set up by hand (no plex.tv)' });
+  manualEntryActions(p);
   p.appendAction('Cancel', function() { p.redirect(PREFIX + ':start'); });
   p.loading = false;
 

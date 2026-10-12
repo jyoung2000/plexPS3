@@ -187,7 +187,19 @@ test('plugin: unlinked state goes to the PIN page and the PIN page fails soft', 
     assert.ifError(p.exception);
     const t = p.items.map(i => i.metadata.title).join('\n');
     assert.ok(/plex\.tv\/link|get_token\.py/.test(t), t);
-    console.log('    link page:', /get_token/.test(t) ? 'plex.tv unreachable -> helper instructions shown' : 'PIN code shown');
+    // on-TV manual entry is always offered so the plex.tv-unreachable case never dead-ends
+    assert.ok(p.items.some(i => /Enter server address on this TV/.test(i.metadata.title)), 'server-entry action present');
+    assert.ok(p.items.some(i => /Enter a Plex token on this TV/.test(i.metadata.title)), 'token-entry action present');
+
+    // drive the on-TV server entry against the live server
+    world.textAnswer = L.PMS_URL;
+    const serverAction = p.items.filter(i => /Enter server address on this TV/.test(i.metadata.title))[0];
+    serverAction.func();
+    if(L.PLEX_TOKEN) {
+      // no token yet, so the server either needs auth (-> back to link) or allows this IP
+      assert.ok(p.redirectedTo === 'plex:start' || p.redirectedTo === 'plex:link', 'server entry resolved: ' + p.redirectedTo);
+    }
+    console.log('    link page:', /get_token/.test(t) ? 'plex.tv unreachable -> helper + on-TV entry' : 'PIN code + on-TV entry');
   } finally {
     env.cleanup();
   }

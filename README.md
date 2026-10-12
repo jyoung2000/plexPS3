@@ -92,6 +92,8 @@ Playback uses Movian's own player, so all of its controls work:
 
 (Mapping from `src/ui/glw/glw_ps3.c`; see docs/movian-api.md.)
 
+Auto mode (the default) direct-plays only what the PS3 can reliably decode: progressive, 4:2:0, 8-bit H.264 up to 1080p / level 4.1 with a sane reference-frame count and a video bitrate up to 20 Mbps (plus MPEG-2/4 and VC-1). Interlaced, 10-bit, 4:2:2/4:4:4, HEVC/AV1, or very high-bitrate files are transcoded by the server to PS3-friendly H.264/AAC. Set **Playback mode = Always direct play** to override and feed the raw file regardless.
+
 * **Quality** is a per-item menu (Square on a title, or the pre-play options):
   Original (direct play) plus 1080p/720p/480p transcode presets. Original is
   the default, so quality is as high as the PS3 can decode; transcodes default
@@ -126,10 +128,10 @@ Playback uses Movian's own player, so all of its controls work:
 | Symptom | Fix |
 |---|---|
 | "No servers found" after linking | Set Plex > Network > Secure connections = **Preferred**, and make sure the PS3 and server are on the same LAN. Or set the Server URL by hand in Settings > Plex. |
-| plex.tv link screen cannot reach plex.tv | Run `python tools/get_token.py` on your PC, then enter the token + server URL in Settings > Plex. |
+| plex.tv link screen cannot reach plex.tv | The link screen now offers **Enter server address on this TV** and **Enter a Plex token on this TV** — run `python tools/get_token.py` on your PC for the token, type it and the server address with the controller, and you are in without leaving the plugin. |
 | 401 / "token rejected" | The token expired or you signed out elsewhere. Open Plex and link again (Settings > Plex > Link with plex.tv). |
-| Black screen / no video on play | Set **Playback mode = Always transcode** for that session; some files the PS3 cannot direct-play slip past the codec check. |
-| Stutter / buffering | Lower **Quality** (e.g. 720p 4 Mbps) — the LAN or the PS3 decoder cannot keep up with the bitrate. |
+| Black screen / no video on play | Auto mode now routes interlaced, non-4:2:0 and high-reference-frame H.264 to the server transcoder, so this is rare. If a file still black-screens, press Square on it and choose **Force transcode**, or set **Playback mode = Always transcode**. |
+| Stutter / buffering | Auto mode transcodes any direct file whose video bitrate is above 20 Mbps, so big remuxes play smoothly by default. If it still stutters, lower **Quality** (e.g. 720p 4 Mbps). To force raw playback of a high-bitrate file, set **Playback mode = Always direct play**. |
 | No audio on a transcode | The server is sending >2-channel audio; the plugin forces stereo AAC, but if it persists set Quality to a transcode preset so audio is re-encoded. |
 | Subtitles missing on a transcode | Turn on *Burn subtitles when transcoding* in Settings > Plex. |
 | Collect a log | `python tools/pull_logs.py <PS3-IP>` (turn on Debug logging first), then paste the output. |

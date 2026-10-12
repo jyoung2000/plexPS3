@@ -119,3 +119,47 @@ test('quality table and helpers', () => {
   assert.strictEqual(decide.qualityById('nope').id, 'original');
   assert.strictEqual(decide.qualityById('480_1.5').bitrate, 1500);
 });
+
+test('PS3 decoder guards: interlaced, non-4:2:0 chroma, many ref frames -> transcode', () => {
+  function mut(f) {
+    const it = JSON.parse(JSON.stringify(fx('metadata_h264_8bit_1080p')));
+    const v = it.Media[0].Part[0].Stream.filter(s => s.streamType === 1)[0];
+    f(it, v);
+    return it;
+  }
+  assert.strictEqual(decide.decide(mut((it, v) => v.scanType = 'interlaced'), { mode: 'auto' }).mode, 'transcode');
+  assert.ok(/interlaced/.test(decide.decide(mut((it, v) => v.scanType = 'interlaced'), { mode: 'auto' }).reason));
+  assert.strictEqual(decide.decide(mut((it, v) => v.chromaSubsampling = '4:2:2'), { mode: 'auto' }).mode, 'transcode');
+  assert.strictEqual(decide.decide(mut((it, v) => v.refFrames = 8), { mode: 'auto' }).mode, 'transcode');
+  // many ref frames are fine at SD
+  assert.strictEqual(decide.decide(mut((it, v) => { v.refFrames = 8; v.height = 480; it.Media[0].height = 480; }), { mode: 'auto' }).mode, 'direct');
+  // progressive 4:2:0 with few ref frames is still direct
+  assert.strictEqual(decide.decide(mut((it, v) => { v.scanType = 'progressive'; v.chromaSubsampling = '4:2:0'; v.refFrames = 2; }), { mode: 'auto' }).mode, 'direct');
+});
+
+test('direct video above the bitrate ceiling transcodes in auto mode (even when resuming)', () => {
+  function big(off) {
+    const it = JSON.parse(JSON.stringify(fx('metadata_h264_8bit_1080p')));
+    it.Media[0].bitrate = 45000;
+    it.Media[0].Part[0].Stream.filter(s => s.streamType === 1)[0].bitrate = 44000;
+    return decide.decide(it, { mode: 'auto', quality: 'original', offsetMs: off || 0 });
+  }
+  const plan = big(0);
+  assert.strictEqual(plan.mode, 'transcode');
+  assert.strictEqual(plan.transcode.directStream, false, 'video is re-encoded, not copied');
+  assert.ok(/Mbps/.test(plan.reason), plan.reason);
+  // resume on an oversized file must also re-encode, not remux (which would keep the bitrate)
+  assert.strictEqual(big(120000).mode, 'transcode');
+  assert.strictEqual(big(120000).transcode.offsetSec, 120);
+});
+
+test('Always direct play overrides every PS3 guard and the bitrate ceiling', () => {
+  function mut(f) {
+    const it = JSON.parse(JSON.stringify(fx('metadata_h264_8bit_1080p')));
+    const v = it.Media[0].Part[0].Stream.filter(s => s.streamType === 1)[0];
+    f(it, v);
+    return it;
+  }
+  assert.strictEqual(decide.decide(mut((it, v) => v.scanType = 'interlaced'), { mode: 'direct' }).mode, 'direct');
+  assert.strictEqual(decide.decide(mut((it, v) => { v.bitrate = 45000; it.Media[0].bitrate = 45000; }), { mode: 'direct' }).mode, 'direct');
+});

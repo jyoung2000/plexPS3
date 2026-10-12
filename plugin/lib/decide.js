@@ -25,6 +25,15 @@ var QUALITIES = [
 exports.QUALITIES = QUALITIES;
 exports.DEFAULT_TRANSCODE_QUALITY = '1080_12';
 
+// PS3 Cell VDEC safe ceilings. A stream can be spec-valid H.264 8-bit 1080p
+// and still black-screen or stutter on the PS3; these catch the common causes.
+// Plex's own PlayStation 3 profile caps h264 video.bitrate at 15360 kbps; we
+// allow headroom and transcode only well above it, since the usual culprit is
+// a 30-80 Mbps remux the PS3 cannot stream smoothly off USB/LAN.
+exports.DIRECT_MAX_VIDEO_KBPS = 20000;   // auto mode: direct h264 above this -> transcode
+exports.DIRECT_MAX_REF_FRAMES = 4;       // many reference frames at HD overrun the decoder
+
+
 var DIRECT_CONTAINERS = ['mkv', 'mp4', 'm4v', 'mov', 'avi', 'mpegts', 'ts', 'mpeg', 'mpg'];
 var DIRECT_AUDIO = ['aac', 'ac3', 'eac3', 'dca', 'dts', 'mp3', 'mp2', 'pcm', 'pcm_s16le',
                     'pcm_s16be', 'pcm_s24le', 'lpcm', 'flac'];
@@ -65,15 +74,21 @@ function videoVerdict(stream, media) {
   var profile = lc(stream && stream.profile);
   var level = stream && stream.level !== undefined && stream.level !== null ? num(stream.level, 0) : null;
   var fps = num(stream && stream.frameRate, 0);
+  var scan = lc(stream && stream.scanType);
+  var chroma = String((stream && stream.chromaSubsampling) || '').replace(/\s/g, '');
+  var refFrames = stream && stream.refFrames !== undefined && stream.refFrames !== null ? num(stream.refFrames, 0) : 0;
 
   if(!codec) return { ok: false, reason: 'unknown video codec' };
   if(height > 1080 || width > 1920) return { ok: false, reason: 'resolution ' + width + 'x' + height + ' above 1080p' };
   if(bitDepth > 8) return { ok: false, reason: bitDepth + '-bit video' };
+  if(scan === 'interlaced') return { ok: false, reason: 'interlaced video (PS3 cannot deinterlace)' };
+  if(chroma && chroma !== '4:2:0') return { ok: false, reason: chroma + ' chroma (only 4:2:0)' };
 
   if(codec === 'h264') {
     if(/high ?10|422|444|high ?4:2:2|high ?4:4:4/.test(profile)) return { ok: false, reason: 'h264 profile ' + profile };
     if(level !== null && level > 41) return { ok: false, reason: 'h264 level ' + (level / 10) + ' above 4.1' };
     if(level === null && height > 720 && fps > 31) return { ok: false, reason: '1080p above 30 fps' };
+    if(refFrames > exports.DIRECT_MAX_REF_FRAMES && height > 576) return { ok: false, reason: refFrames + ' reference frames at ' + height + 'p' };
     return { ok: true, reason: 'h264 ' + width + 'x' + height + ' 8-bit' };
   }
   if(util.contains(DIRECT_VIDEO_OTHER, codec)) return { ok: true, reason: codec + ' ' + width + 'x' + height };
@@ -125,7 +140,8 @@ function evaluateMedia(media, mediaIndex) {
     containerOk: c.ok,
     directOk: v.ok && a.ok && c.ok,
     reason: reasons.length ? reasons.join(', ') : v.reason + ' / ' + a.reason + ' / ' + c.reason,
-    height: num(media.height, 0)
+    height: num(media.height, 0),
+    videoKbps: num(st.video && st.video.bitrate, num(media.bitrate, 0))
   };
 }
 exports.evaluateMedia = evaluateMedia;
@@ -211,6 +227,9 @@ exports.decide = function(item, opts) {
 
   if(mode === 'transcode') return tc(false, 'Playback mode = Always transcode');
   if(quality.id !== 'original' && mode !== 'direct') return tc(false, 'quality ' + quality.title + ' selected');
+
+  if(chosen.directOk && mode === 'auto' && chosen.videoKbps > exports.DIRECT_MAX_VIDEO_KBPS)
+    return tc(false, 'video bitrate ' + Math.round(chosen.videoKbps / 1000) + ' Mbps above the direct-play ceiling; transcoding for smooth playback');
 
   if(chosen.directOk) {
     if(offsetMs > 0 && mode !== 'direct')
